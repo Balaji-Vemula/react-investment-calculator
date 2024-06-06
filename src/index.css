@@ -64,6 +64,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* To remove the up and down arrow for the input:number field */
 /* Firefox */
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
