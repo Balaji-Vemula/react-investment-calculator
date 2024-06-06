@@ -16,7 +16,6 @@ export default function InputForm() {
       //  or else using directly the variable without square brackets creates the literal varaible name
       //  as a key not takes the string stored in it for the key
     }));
-    console.log(userInput)
   };
 
   return (
@@ -44,7 +43,7 @@ export default function InputForm() {
               handleInputChange("annualInvestment", event.target.value)
             }
             required
-            />
+          />
         </p>
       </div>
       <div className="input-group">
@@ -56,9 +55,9 @@ export default function InputForm() {
             value={userInput.expectedReturn}
             onChange={(event) =>
               handleInputChange("expectedReturn", event.target.value)
-              }
-              required
-              />
+            }
+            required
+          />
         </p>
         <p>
           <label htmlFor="duration">Duration</label>
