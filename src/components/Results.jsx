@@ -1,4 +1,4 @@
-import { calculateInvestmentResults, formatter } from "../util/investment.js";
+import { calculateInvestmentResults, formatter, formatterINR } from "../util/investment.js";
 
 export default function Results({ data }) {
   const annualData = calculateInvestmentResults(data);
@@ -23,10 +23,10 @@ export default function Results({ data }) {
           return (
             <tr key={row.year}>
               <td>{row.year}</td>
-              <td>{formatter.format(row.valueEndOfYear)}</td>
-              <td>{formatter.format(row.interest)}</td>
-              <td>{formatter.format(totalInterest)}</td>
-              <td>{formatter.format(totalAmountInvested)}</td>
+              <td>{formatterINR.format(row.valueEndOfYear)}</td>
+              <td>{formatterINR.format(row.interest)}</td>
+              <td>{formatterINR.format(totalInterest)}</td>
+              <td>{formatterINR.format(totalAmountInvested)}</td>
             </tr>
           );
         })}
